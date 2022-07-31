@@ -1,23 +1,95 @@
-::before, ::after {
+*, *::before, *::after{
     box-sizing: border-box;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:sans-serif;
+    
+    } 
+    .container{
+        width: 900px ;
+        max-width: 90%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px 2px;
+    }
+    
+    :root {
+        --color-neutral: 300;
+        --color-wrong:0;
+        --color-correct:145;
 
 
-}
-body{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-title{
-padding: 0;
-margin: 0;
-display: 0;
-justify-content: left;
-align-items: center;
+    }
+    body{
+        --color: var(--color-neutral);
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content:center;
+        align-items: center;
+        background-color:hsl(var(--color), 100%,20%);
+    }
+    body.wrong{
+        --color: var(--color-wrong)
+    }
+    body.correct{
+        --color: var(--color-correct)
+    }
+    .btn-grid{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        gap: 10px;
+        margin: 40px,0;
+    }
+    .btn{
+        --color: var(--color-neutral);
+        border: 1px solid hsl(var(--color), 100%, 20%);
+        background-color: hsl(var(--color), 100%, 88%);
+        border-radius: 5px;
+        padding: 5px 10px;
+
+        
+    }
+
+    .btn:hover{
+
+        border-color: blue;
+    }
+
+    .btn.correct{
+        --color: var(--color-correct);
+        --color: var(--color-correct);
+    }
+     
+    .btn.wrong{
+        --color: var(--color-wrong);
+        --color: var(--color-wrong);
+    }
+
+    .start-btn, .next-btn, .skip-btn{
+        font-size: 1.5em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+        padding: 5px 10px;
+
+    }
+    .control{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hide{
+        display: none;
+    }
 
 
-}
 
+
+    
+
+
+
+
+   
+    

@@ -2,18 +2,19 @@
 <html lang="em">
     <head>
         <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="P1BG.css"/>
+        <script defer src="P1BG.js"></script>  
         <title>Lonni's triva game </title>
-        <script src="P1BG.js"></script>  
-        <script src="P1BG.css>"></script>
     </head>
+    
     <body>
-        <h1 id="title">Triva Game!!!!!</h1>
-
-
-        <div class = "container" class="hide" > 
-        <div id="answer-buttons" class="btn-grid">
+         <div class = "container"> 
+            <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            </div>
+        <div id="answer-buttons" class="btn-grid hide">
             <button class="btn">Answer1</button>
             <button class="btn">Answer2</button>
             <button class="btn">Answer3</button>
@@ -21,12 +22,14 @@
             <button class="btn">Answer5</button>
          </div>    
            
-         </div>
+         
          <div class="control">
              <button id="start-btn" class="start-btn btn">Start</button>
              <button id="next-btn" class="next-btn btn hide">Next</button>
              <button id="skip-btn" class="skip-btn btn hide">Skip</button>
             </div>
+        </div>
 
     </body>
+</html>
 
