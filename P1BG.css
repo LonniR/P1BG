@@ -5,8 +5,8 @@
     } 
     .title{
       padding: 5%;
-      height: 100%;
-      width: auto;
+      height: 100px;
+      width: 50px;
     }
     .container{
         width: 900px ;
