@@ -4,6 +4,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
+
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
@@ -108,12 +109,43 @@ const questions = [
     {
       question: 'Naruto is a container of which Tailed-Beast?',
       answers: [
-        { text: 'six-tails', correct: false },
-        { text: 'eight-tails', correct: true},
+        { text: 'six-tails', correct: true},
+        { text: 'eight-tails', correct: false},
         { text: 'one-tails', correct: false }
       ]
+    },
+    {
+        question: 'who is naruto Bestfriend',
+        answer: [
+             { text: 'sasuke', correct: true},
+       
+             { text: 'jiraiya', correct: false},
+        
+             { text: 'Hinata', correct: false }
+
+        ]
+
+
+
+
+    },
+    {
+        question: 'Which Hokage sealed the nine-tailed fox inside Naruto?',
+        answer: [
+             { text: 'fourth Hokage', correct: true},
+       
+             { text: 'third Hokage', correct: false},
+        
+             { text: 'second Hokage', correct: false }
+
+        ]
+
+
+
+
     }
   ]
+  
 
 
 
