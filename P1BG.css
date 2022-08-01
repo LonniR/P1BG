@@ -3,6 +3,11 @@
     font-family:sans-serif;
     
     } 
+    .title{
+      padding: 5%;
+      height: 100%;
+      width: auto;
+    }
     .container{
         width: 900px ;
         max-width: 90%;

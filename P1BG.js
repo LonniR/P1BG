@@ -89,7 +89,7 @@ const questions = [
       ]
     },
     {
-      question: 'Whom did Kakashi get his eye from',
+      question: 'Whom did Kakashi get his eye from?',
       answers: [
         { text: 'obito', correct: true },
         { text: 'Naruto', correct: false},
@@ -98,7 +98,7 @@ const questions = [
       ]
     },
     {
-      question: 'How many times did Naruto fail the graduation test ',
+      question: 'How many times did Naruto fail the graduation test? ',
       answers: [
         { text: 'once', correct: false },
         { text: 'three', correct: true },
@@ -115,36 +115,41 @@ const questions = [
       ]
     },
     {
-        question: 'who is naruto Bestfriend',
-        answer: [
-             { text: 'sasuke', correct: true},
-       
-             { text: 'jiraiya', correct: false},
-        
-             { text: 'Hinata', correct: false }
-
-        ]
-
-
-
-
+      question: 'Naruto bestfriend?',
+      answers: [
+        { text: 'sasuke', correct: true},
+        { text: 'Hinata', correct: false},
+        { text: 'jiraiya', correct: false }
+      ]
     },
     {
-        question: 'Which Hokage sealed the nine-tailed fox inside Naruto?',
-        answer: [
-             { text: 'fourth Hokage', correct: true},
-       
-             { text: 'third Hokage', correct: false},
+      question: 'Naruto color he wears?',
+      answers: [
+        { text: 'orange', correct: true},
+        { text: 'pink', correct: false},
+        { text: 'blue', correct: false }
+      ]
+    },
+    {
+      question: 'Naruto has so many friend in the first in S1?',
+      answers: [
+        { text: 'false', correct: true},
+        { text: 'true', correct: false}
         
-             { text: 'second Hokage', correct: false }
+      ]
+    },
+    {
+      question: 'Which Hokage sealed the nine-tailed fox inside Naruto?',
+      answers: [
+        { text: 'thrid Hokage', correct: false},
+        { text: 'fourth Hokage', correct: true},
+        {text: 'second Hokage', correct: false}
+        
+      ]
+    },
 
-        ]
-
-
-
-
-    }
   ]
+    
   
 
 
