@@ -3,17 +3,25 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const scoreboard__score = document.getElementById('scoreNumber')
+
+var score = 0
+// score ++
 
 
 let shuffledQuestions, currentQuestionIndex
 
-startButton.addEventListener('click', startGame)
+
+
+startButton.addEventListener('click', startGame,scoreNumber)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
-  setNextQuestion()
+setNextQuestion()
 })
 
+
 function startGame() {
+  
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
@@ -22,8 +30,10 @@ function startGame() {
 }
 
 function setNextQuestion() {
-  resetState()
+  resetState( )
+
   showQuestion(shuffledQuestions[currentQuestionIndex])
+
 }
 
 function showQuestion(question) {
@@ -33,7 +43,8 @@ function showQuestion(question) {
     button.innerText = answer.text
     button.classList.add('btn')
     if (answer.correct) {
-      button.dataset.correct = answer.correct
+      button.dataset.correct = answer.correct 
+
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
@@ -46,11 +57,20 @@ function resetState() {
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
+  
 }
 
 function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
+
+  if(correct) {
+    score ++
+    scoreboard__score.textContent = score
+
+
+  }
+
   setStatusClass(document.body, correct)
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
@@ -58,10 +78,14 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    startButton.innerText = 'Restart'
+    
+    startButton.innerText= 'The End'
     startButton.classList.remove('hide')
+
   }
+
 }
+
 
 function setStatusClass(element, correct) {
   clearStatusClass(element)
@@ -75,9 +99,18 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
+
 }
 
-const questions = [
+
+
+
+
+
+
+const questions = [ 
+  
+  
     {
       question: 'who held naruto hostage when he was born?',
       answers: [
@@ -147,8 +180,27 @@ const questions = [
         
       ]
     },
+    
 
   ]
+  //add end page
+   
+
+  
+
+
+
+  //program my Play Again button
+  
+   
+
+
+   
+   
+
+  
+  
+  
     
   
 

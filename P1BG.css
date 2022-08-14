@@ -87,6 +87,26 @@
     .hide{
         display: none;
     }
+    .score{
+        display:flexbox;
+        grid: template columns 200px;
+        width: auto;
+        height:500px;
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+    .scoreboard__name,
+    .scoreboard__score{
+        padding: 10px;
+        text-align: center;
+
+    }
+    .scoreboard__name{
+        font-weight: bold;
+        border-bottom: 1px solid;
+    }
+    
+    
     
    
 
