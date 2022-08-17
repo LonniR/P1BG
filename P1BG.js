@@ -4,6 +4,8 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const scoreboard__score = document.getElementById('scoreNumber')
+//const endgame_page = document.getElementById('endgame')
+
 
 var score = 0
 // score ++
@@ -67,6 +69,7 @@ function selectAnswer(e) {
   if(correct) {
     score ++
     scoreboard__score.textContent = score
+    score.length=8
 
 
   }
@@ -77,14 +80,25 @@ function selectAnswer(e) {
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
+  
+
   } else {
+    console.log('GAME IS OVER!!!')
     
-    startButton.innerText= 'The End'
+
+    startButton.innerText = 'The End'
     startButton.classList.remove('hide')
+    startButton.addEventListener('click', function() {
+        window.location = '/P1BG/end.html'
+    })
 
   }
 
 }
+
+
+
+
 
 
 function setStatusClass(element, correct) {
@@ -101,6 +115,9 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 
 }
+
+
+
 
 
 
@@ -179,18 +196,13 @@ const questions = [
         {text: 'second Hokage', correct: false}
         
       ]
+
     },
     
 
   ]
-  //add end page
-   
 
   
-
-
-
-  //program my Play Again button
   
    
 
